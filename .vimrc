@@ -36,6 +36,7 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 
 " Plugin vim-powerline settings.
 let g:indentLine_char = '┆'
@@ -47,4 +48,7 @@ let NERDTreeChDirMode=1
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeWinSize=25
+
+" Plugin tagbar settings.
+map <F3> :TagbarToggle<CR> 
 
