@@ -29,7 +29,6 @@ call vundle#end()
 filetype plugin indent on
 
 " Plugins.
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'fholgado/minibufexpl.vim'
@@ -37,6 +36,9 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'dyng/ctrlsf.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Plugin vim-powerline settings.
 let g:indentLine_char = '┆'
@@ -51,4 +53,13 @@ let NERDTreeWinSize=25
 
 " Plugin tagbar settings.
 map <F3> :TagbarToggle<CR> 
+
+" Plugin ctrlsf settings.
+map <F4> <Plug>CtrlSFPrompt
+map <F5> <Plug>CtrlSFQuickfixPrompt
+
+" Plugin airline settings
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme="luna"
 
