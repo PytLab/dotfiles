@@ -2,17 +2,17 @@
 Dotfiles
 ========
 
-Quick install & uninstall
--------------------------
+**Quick install & uninstall**
 
 install::
+
     $ ./setup --install
 
 uninstall::
+
     $ ./setup --uninstall
 
-Contact
--------
+**Contact**
 
 shaozhengjiang@gmail.com
     
