@@ -21,6 +21,7 @@ check_essential_softwares()
         fi
         echo "Checking ${e}...ok"
     done
+    echo
 }
 
 create_softlinks()

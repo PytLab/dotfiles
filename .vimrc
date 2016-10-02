@@ -21,14 +21,6 @@ set expandtab
 set showmatch           " 显示匹配的括号
 set cursorline          " 突出显示当前行
 
-" Vundle
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-call vundle#end()
-filetype plugin indent on
-
 " Auto add head info
 " .py file into add header
 function HeaderPython()
@@ -46,6 +38,12 @@ function HeaderBash()
 	normal o
 endf
 autocmd bufnewfile *.sh call HeaderBash()
+
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#rc()
+filetype plugin indent on
 
 " Plugins.
 Plugin 'Valloric/YouCompleteMe'
