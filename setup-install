@@ -60,5 +60,5 @@ main()
 # Run script.
 RUNNING=$(basename $0)
 
-[ "$RUNNING" = "install.sh" ] && main
+[ "$RUNNING" = "setup-install" ] && main
 

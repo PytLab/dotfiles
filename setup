@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+set -e
+
+version()
+{
+    echo "dotfiles 0.1.0"
+}
+
+usage()
+{
+    version
+	echo "Usage: ./setup [--install | --uninstall]"
+}
+
+help()
+{
+    usage
+	echo
+	echo "  install or uninstall all dotfiles. "
+	echo
+	echo "  --install      Install all dotfiles"
+	echo "  --uninstall    Uninstall dotfiles"
+	echo "  --version      Show the version number"
+	echo
+	echo "  For more information, see https://github.com/PytLab/dotfiles"
+	echo
+}
+
+if [ "$1" = "--debug" ]; then
+    export DOTFILES_DEUBG=1
+    shift
+fi
+
+[ -n "${DOTFILES_DEUBG}" ] && set -x
+	
+case "$1" in
+	"--version")
+		version
+		;;
+	"--usage")
+		usage
+		;;
+	"--help")
+		help
+		;;
+	"--install")
+		bash ./setup-install
+		;;
+	"--uninstall")
+		bash ./setup-uninstall
+		;;
+	*)
+		echo "Unknown parameter: "$1"" >&2
+		usage >&2
+		exit 1
+		;;
+esac
+
+unset DOTFILES_DEUBG
+

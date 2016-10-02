@@ -7,7 +7,7 @@ RUNNING=$(basename $0)
 HOME=${HOME}
 
 # Run script directly.
-if [ "$RUNNING" = "uninstall.sh" ]; then
+if [ "$RUNNING" = "setup-uninstall" ]; then
 	dotfiles=(".vimrc" ".gitconfig" ".pip")
 
 	for dotfile in "${dotfiles[@]}"
