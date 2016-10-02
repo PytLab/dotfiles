@@ -1,4 +1,5 @@
 " ShaoZhengjiang's vimrc.
+
 " Basic settings.
 syntax on               " 语法高亮  
 set showcmd             " 输入的命令显示出来，看的清楚些  
@@ -7,7 +8,6 @@ set foldenable          " 允许折叠
 set foldmethod=manual   " 手动折叠  
 set nocompatible
 set number
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容  
 if version >= 603
 	set helplang=cn
 	set encoding=utf-8
@@ -79,4 +79,13 @@ map <F5> <Plug>CtrlSFQuickfixPrompt
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme="luna"
+
+" Plugin YCM settings.
+set completeopt=longest,menu
+let g:ycm_min_num_of_chars_for_completion=2
+let g:ycm_cache_omnifunc=0
+let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
