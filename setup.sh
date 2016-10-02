@@ -2,8 +2,6 @@
 
 set -e
 
-#source ./setup-complete.sh
-
 if [ "$1" = "--debug" ]; then
     export DOTFILES_DEUBG=1
     shift
