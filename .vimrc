@@ -9,8 +9,8 @@ set foldmethod=manual   " 手动折叠
 set nocompatible
 set number
 if version >= 603
-	set helplang=cn
-	set encoding=utf-8
+    set helplang=cn
+    set encoding=utf-8
 endif
 
 set fileformat=unix     " 设置以unix的格式保存文件
@@ -24,18 +24,18 @@ set cursorline          " 突出显示当前行
 " Auto add head info
 " .py file into add header
 function HeaderPython()
-	call setline(1, "#!/usr/bin/env python")
-	call append(1, "# -*- coding: utf-8 -*-")
-	normal G
-	normal o
+    call setline(1, "#!/usr/bin/env python")
+    call append(1, "# -*- coding: utf-8 -*-")
+    normal G
+    normal o
 endf
 autocmd bufnewfile *.py call HeaderPython()
 
 " .sh file
 function HeaderBash()
-	call setline(1, "#!/usr/bin/env bash")
-	normal G
-	normal o
+    call setline(1, "#!/usr/bin/env bash")
+    normal G
+    normal o
 endf
 autocmd bufnewfile *.sh call HeaderBash()
 
