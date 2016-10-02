@@ -8,14 +8,14 @@ HOME=${HOME}
 
 # Run script directly.
 if [ "$RUNNING" = "setup-uninstall" ]; then
-	dotfiles=(".vimrc" ".gitconfig" ".pip")
+    dotfiles=(".vimrc" ".gitconfig" ".pip")
 
-	for dotfile in "${dotfiles[@]}"
-	do
-		echo "Remove symlink "${HOME}/${dotfile}"..."
-		rm "${HOME}/${dotfile}"
-	done
+    for dotfile in "${dotfiles[@]}"
+    do
+        echo "Remove symlink "${HOME}/${dotfile}"..."
+        rm "${HOME}/${dotfile}"
+    done
 
-	echo "Done!"
+    echo "Done!"
 fi
 

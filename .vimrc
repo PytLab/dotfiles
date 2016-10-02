@@ -17,6 +17,7 @@ set fileformat=unix     " 设置以unix的格式保存文件
 set cindent             " 设置C样式的缩进格式
 set tabstop=4           " 设置table长度
 set shiftwidth=4        " 同上
+set expandtab
 set showmatch           " 显示匹配的括号
 set cursorline          " 突出显示当前行
 
