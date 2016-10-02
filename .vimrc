@@ -1,11 +1,11 @@
 " ShaoZhengjiang's vimrc.
 
 " Basic settings.
-syntax on               " 语法高亮  
-set showcmd             " 输入的命令显示出来，看的清楚些  
-set laststatus=1        " 启动显示状态行(1),总是显示状态行(2)  
-set foldenable          " 允许折叠  
-set foldmethod=manual   " 手动折叠  
+syntax on
+set showcmd
+set laststatus=1
+set foldenable
+set foldmethod=manual
 set nocompatible
 set number
 if version >= 603
@@ -13,13 +13,13 @@ if version >= 603
     set encoding=utf-8
 endif
 
-set fileformat=unix     " 设置以unix的格式保存文件
-set cindent             " 设置C样式的缩进格式
-set tabstop=4           " 设置table长度
-set shiftwidth=4        " 同上
+set fileformat=unix
+set cindent
+set tabstop=4
+set shiftwidth=4
 set expandtab
-set showmatch           " 显示匹配的括号
-set cursorline          " 突出显示当前行
+set showmatch
+set cursorline
 
 " Auto add head info
 " .py file into add header
@@ -56,10 +56,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-" Plugin vim-powerline settings.
-let g:indentLine_char = '┆'
-let g:indentLine_enabled = 1
 
 " Plugin nerdtree settings.
 map <F2> :NERDTreeToggle<CR>
