@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+
+set -e
+[ -n "$DOTFILES_DEBUG" ] && set -x
+
+# Global vars.
+HOME=${HOME}
+EXEC_PATH=${PWD}
+VUNDLE_PATH="${HOME}/.vim/bundle/Vundle.vim"
+
+# Pre check.
+check_essential_softwares()
+{
+    local essentials=("vim" "git")
+	for e in "${essentials[@]}"
+	do
+        type ${e} 2>&1 > /dev/null
+		if [ "$?" -ne 0 ]; then
+            echo "ERROR: **${e}** is not installed!"
+			exit 1
+		fi
+		echo "Checking ${e}...ok"
+	done
+}
+
+create_softlinks()
+{
+    local dotfiles=(".pip" ".vimrc" ".gitconfig")
+	for dotfile in "${dotfiles[@]}"
+	do
+        ln -sf "${EXEC_PATH}/${dotfile}" "${HOME}/${dotfile}"
+		echo "Create symlink ${HOME}/${dotfile}"
+	done
+}
+
+install_vundle()
+{
+    if [ -d "${VUNDLE_PATH}" ]; then
+        echo "${VUNDLE_PATH} already exits. Updating..."
+	    cd "${VUNDLE_PATH}"
+		git pull
+		cd - > /dev/null 2>&1
+	else
+		echo "${VUNDLE_PATH} not exists. Downloading..."
+		git clone https://github.com/gmarik/Vundle.vim.git ${VUNDLE_PATH}
+	fi
+
+	# Install plugins.
+	echo "Installing vim plugins..."
+	vim +PluginInstall +qall
+}
+
+main()
+{
+    check_essential_softwares
+	create_softlinks
+	install_vundle
+}
+
+# Run script.
+RUNNING=$(basename $0)
+
+[ "$RUNNING" = "install.sh" ] && main
+
