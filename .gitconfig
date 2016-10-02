@@ -1,0 +1,7 @@
+[user]
+	name = pytlab
+	email = shaozhengjiang@gmail.com
+
+[core]
+        editor = vim
+
