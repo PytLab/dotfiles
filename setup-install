@@ -32,9 +32,10 @@ create_softlinks()
         ln -sf "${EXEC_PATH}/${dotfile}" "${HOME}/${dotfile}"
         echo "Create symlink ${HOME}/${dotfile}"
     done
+    echo
 }
 
-install_vundle()
+install_plugins_online()
 {
     if [ -d "${VUNDLE_PATH}" ]; then
         echo "${VUNDLE_PATH} already exits. Updating..."
@@ -51,15 +52,44 @@ install_vundle()
     vim +PluginInstall +qall
 }
 
+install_plugins_offline()
+{
+    local dot_vim_path="${HOME}/.vim"
+    local bundle_tar="bundle.tar.gz"
+
+    [ ! -d "$dot_vim_path" ] && mkdir ${dot_vim_path}
+
+    if [ -f "${bundle_tar}" ]; then
+        echo "Install vundle and plugins offline"
+
+        rm -rf "${dot_vim_path}/bundle"
+        cp ${bundle_tar} ${dot_vim_path}
+        cd ${dot_vim_path}
+
+        echo "Unpacking ${bundle_tar}..."
+        tar zxvf ${bundle_tar} > /dev/null 2>&1
+        rm ${bundle_tar}
+        cd - > /dev/null 2>&1
+
+        echo "Done!"
+    else
+        echo "ERROR: **"${bundle_tar}" not exists!"
+        exit 1
+    fi
+}
+
 main()
 {
     check_essential_softwares
     create_softlinks
-    install_vundle
+    if [ -n "$1" ] && [ "$1" = "--offline" ]; then
+        install_plugins_offline
+    else
+        install_plugins_online
+    fi
 }
 
 # Run script.
 RUNNING=$(basename $0)
-
-[ "$RUNNING" = "setup-install" ] && main
+[ "$RUNNING" = "setup-install" ] && main $1
 
