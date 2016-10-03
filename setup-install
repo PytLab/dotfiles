@@ -80,6 +80,19 @@ install_plugins_offline()
     fi
 }
 
+install_powerline_font()
+{
+    echo "Install powerline-font"
+
+    cd resources
+    tar zxvf fonts.tar.gz
+    cd - > /dev/null 2>&1
+
+    cd resources/fonts
+    ./install.sh
+    cd - > /dev/null 2>&1
+}
+
 main()
 {
     check_essential_softwares
@@ -89,6 +102,7 @@ main()
     else
         install_plugins_online
     fi
+    install_powerline_font
 }
 
 # Run script.
