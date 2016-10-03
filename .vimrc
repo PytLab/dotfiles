@@ -46,6 +46,7 @@ call vundle#rc()
 filetype plugin indent on
 
 " Plugins.
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'fholgado/minibufexpl.vim'
@@ -70,6 +71,11 @@ map <F3> :TagbarToggle<CR>
 " Plugin ctrlsf settings.
 map <F4> <Plug>CtrlSFPrompt
 map <F5> <Plug>CtrlSFQuickfixPrompt
+
+" Plugin indentLine settings.
+let g:indentLine_char = "┆"
+let g:indentLine_enabled = 1
+let g:autopep8_disable_show_diff=1
 
 " Plugin airline settings
 let g:airline_powerline_fonts = 1
