@@ -1,3 +1,6 @@
 # Ignore bundle.tar.gz
 bundle.tar.gz
 
+# Vim temp files.
+*.swp
+
