@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Summary: Uninstall all dotfiles.
+# Usage: ./setup-uninstall
 
 set -e
 [ -n "${DOTFILES_DEBUG}" ] && set -x

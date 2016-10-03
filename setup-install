@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Summary: Configure environment and install vim plugins online or offline
+# Usage: ./setup-install [ | --offline]
 
 set -e
 [ -n "$DOTFILES_DEBUG" ] && set -x
