@@ -20,6 +20,7 @@ set shiftwidth=4
 set expandtab
 set showmatch
 set cursorline
+colorscheme molokai
 
 " Auto add head info
 " .py file into add header
@@ -92,4 +93,7 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
+" molokai theme
+let g:molokai_original = 1
+let g:rehash256 = 1
 
