@@ -102,9 +102,32 @@ install_powerline_font()
     rm -rf resources/fonts/
 }
 
+install_vim_colorschemes()
+{
+    local colorsdir="${HOME}/.vim/colors"
+    declare -A local schemes=( \
+        ["molokai.vim"]="https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim" \
+    )
+
+    echo "Install vim colorschemes"
+    [ -d "${colorsdir}" ] && rm -rf ${colorsdir}
+    mkdir ${colorsdir}
+    cd ${colorsdir}
+
+    for scheme in "${!schemes[@]}"
+    do
+        wget ${schemes[$scheme]} > /dev/null 2>&1
+        echo "Install ${scheme} ... ok"
+    done
+
+    cd - > /dev/null 2>&1
+    echo
+}
+
 main()
 {
     check_essential_softwares
+    install_vim_colorschemes
     create_softlinks
     if [ -n "$1" ] && [ "$1" = "--offline" ]; then
         install_plugins_offline
