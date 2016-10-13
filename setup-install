@@ -13,7 +13,7 @@ VUNDLE_PATH="${HOME}/.vim/bundle/Vundle.vim"
 # Pre check.
 check_essential_softwares()
 {
-    local essentials=("vim" "git")
+    local essentials=("vim" "git" "tmux")
     for e in "${essentials[@]}"
     do
         type ${e} 2>&1 > /dev/null
@@ -28,7 +28,7 @@ check_essential_softwares()
 
 create_softlinks()
 {
-    local dotfiles=(".pip" ".vimrc" ".gitconfig")
+    local dotfiles=(".pip" ".vimrc" ".gitconfig" ".tmux.conf")
     for dotfile in "${dotfiles[@]}"
     do
         ln -sf "${EXEC_PATH}/${dotfile}" "${HOME}/${dotfile}"
