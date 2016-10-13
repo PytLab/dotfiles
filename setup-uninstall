@@ -10,7 +10,7 @@ HOME=${HOME}
 
 # Run script directly.
 if [ "$RUNNING" = "setup-uninstall" ]; then
-    dotfiles=(".vimrc" ".gitconfig" ".pip")
+    dotfiles=(".vimrc" ".gitconfig" ".pip" ".ycm_extra_conf.py")
 
     for dotfile in "${dotfiles[@]}"
     do

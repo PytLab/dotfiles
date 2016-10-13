@@ -34,6 +34,13 @@ create_softlinks()
         ln -sf "${EXEC_PATH}/${dotfile}" "${HOME}/${dotfile}"
         echo "Create symlink ${HOME}/${dotfile}"
     done
+
+    # Copy .ycm_extra_conf.py
+    if [ -f "${HOME}/.ycm_extra_conf.py" ]; then
+        rm "${HOME}/.ycm_extra_conf.py"
+    fi
+    cp "${EXEC_PATH}/.ycm_extra_conf.py" "${HOME}/.ycm_extra_conf.py"
+    echo "Create ${HOME}/.ycm_extra_conf.py"
     echo
 }
 
@@ -85,12 +92,14 @@ install_powerline_font()
     echo "Install powerline-font"
 
     cd resources
-    tar zxvf fonts.tar.gz
+    tar zxvf fonts.tar.gz > /dev/null 2>&1
     cd - > /dev/null 2>&1
 
     cd resources/fonts
     ./install.sh
     cd - > /dev/null 2>&1
+
+    rm -rf resources/fonts/
 }
 
 main()
