@@ -35,12 +35,11 @@ create_softlinks()
         echo "Create symlink ${HOME}/${dotfile}"
     done
 
-    # Copy .ycm_extra_conf.py
-    if [ -f "${HOME}/.ycm_extra_conf.py" ]; then
-        rm "${HOME}/.ycm_extra_conf.py"
-    fi
-    cp "${EXEC_PATH}/.ycm_extra_conf.py" "${HOME}/.ycm_extra_conf.py"
-    echo "Create ${HOME}/.ycm_extra_conf.py"
+    # Create .ycm_extra_conf.py symlink.
+    cd ${HOME}
+    ln -sf ${EXEC_PATH}/.ycm_extra_conf.py .ycm_extra_conf.py
+    cd - > /dev/null 2>&1
+    echo "Create symlink ${HOME}/.ycm_extra_conf.py"
     echo
 }
 
