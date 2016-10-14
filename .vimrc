@@ -20,6 +20,7 @@ set shiftwidth=4
 set expandtab
 set showmatch
 set cursorline
+set cc=80
 
 " Auto add head info
 " .py file into add header
