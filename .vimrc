@@ -12,7 +12,6 @@ if version >= 603
     set helplang=cn
     set encoding=utf-8
 endif
-
 set fileformat=unix
 set cindent
 set tabstop=4
@@ -21,6 +20,7 @@ set expandtab
 set showmatch
 set cursorline
 set cc=80
+set foldmethod=marker
 
 " Auto add head info
 " .py file into add header
