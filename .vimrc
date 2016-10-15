@@ -92,6 +92,10 @@ let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_remove_include_errors = 1
 
 " molokai theme
 colorscheme molokai
