@@ -21,6 +21,7 @@ set showmatch
 set cursorline
 set cc=80
 set foldmethod=marker
+set hlsearch
 
 " Auto add head info
 " .py file into add header
