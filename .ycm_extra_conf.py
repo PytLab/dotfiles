@@ -23,6 +23,7 @@ flags = [
 '-isystem', './tests/gmock/gtest/include',
 '-isystem', './tests/gmock',
 '-isystem', './tests/gmock/include',
+'-I', '/usr/include/mpi',
 '-I', '/home/zjshao/repos/KMCLibX/c++/src',
 '-I', '/home/zjshao/repos/KMCLibX/c++/externals/include',
 '-I', '/home/zjshao/repos/KMCLibX/c++/unittest'
