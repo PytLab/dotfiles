@@ -59,6 +59,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'MattesGroeger/vim-bookmarks'
 
 " Plugin nerdtree settings.
 map <F2> :NERDTreeToggle<CR>
@@ -102,4 +103,8 @@ let g:syntastic_cpp_remove_include_errors = 1
 colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
+
+" Plugin vim-bookmarks settings.
+highlight BookmarkSign ctermbg=NONE ctermfg=160
+highlight BookmarkLine ctermbg=194 ctermfg=NONE
 
