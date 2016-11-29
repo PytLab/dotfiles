@@ -20,6 +20,10 @@ install offline (with `bundle.tar.gz` supplied)::
 
     $ ./setup --install --offline
 
+**Vim ScreeShot**
+
+.. image:: https://github.com/PytLab/dotfiles/blob/vim-screenshot.png
+
 **Contact**
 
 shaozhengjiang@gmail.com
