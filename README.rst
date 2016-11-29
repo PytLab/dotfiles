@@ -22,7 +22,7 @@ install offline (with `bundle.tar.gz` supplied)::
 
 **Vim ScreeShot**
 
-.. image:: https://github.com/PytLab/dotfiles/blob/vim-screenshot.png
+.. image:: https://github.com/PytLab/dotfiles/blob/master/vim-screenshot.png
 
 **Contact**
 
