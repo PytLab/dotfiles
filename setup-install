@@ -110,7 +110,7 @@ install_vim_colorschemes()
 
     echo "Install vim colorschemes"
     [ -d "${colorsdir}" ] && rm -rf ${colorsdir}
-    mkdir ${colorsdir}
+    mkdir -p ${colorsdir}
     cd ${colorsdir}
 
     for scheme in "${!schemes[@]}"
