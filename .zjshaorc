@@ -1,0 +1,7 @@
+#!/bin/local/env bash
+
+alias ll='ls -a -l'
+alias vim='/usr/local/bin/mvim -v'
+alias vi='/usr/local/bin/mvim -v'
+alias repos='cd /Users/zjshao/Documents/repos'
+
