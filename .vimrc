@@ -44,8 +44,7 @@ autocmd bufnewfile *.sh call HeaderBash()
 " Vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
-filetype plugin indent on
+call vundle#begin()
 
 " Plugins.
 Plugin 'VundleVim/Vundle.vim'
@@ -60,6 +59,10 @@ Plugin 'dyng/ctrlsf.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'MattesGroeger/vim-bookmarks'
+Plugin 'vim-syntastic/syntastic'
+
+call vundle#end()
+filetype plugin indent on
 
 " Plugin nerdtree settings.
 map <F2> :NERDTreeToggle<CR>
@@ -72,15 +75,14 @@ let NERDTreeWinSize=25
 map <F3> :TagbarToggle<CR> 
 
 " Plugin ctrlsf settings.
-map <F4> <Plug>CtrlSFPrompt
-map <F5> <Plug>CtrlSFQuickfixPrompt
+map <F4> <Plug>CtrlSF
 
 " Plugin indentLine settings.
 let g:indentLine_char = "┆"
 let g:indentLine_enabled = 1
 let g:autopep8_disable_show_diff=1
 
-" Plugin airline settings
+"" Plugin airline settings
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme="luna"
@@ -107,4 +109,20 @@ let g:rehash256 = 1
 " Plugin vim-bookmarks settings.
 highlight BookmarkSign ctermbg=NONE ctermfg=160
 highlight BookmarkLine ctermbg=194 ctermfg=NONE
+
+" Plugin syntastic settings.
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+" Use pylint to check python files.
+let g:syntastic_python_checkers = ['pylint']
+map <F5> :SyntasticCheck<CR>
+
+" Ignore warnings about newlines trailing.
+let g:syntastic_quiet_messages = { 'regex': 'trailing-newlines' }
 
