@@ -23,7 +23,7 @@ check_bash_version()
 # Pre check.
 check_essential_softwares()
 {
-    local essentials=("vim" "git" "tmux" "zsh")
+    local essentials=("vim" "git" "tmux")
     for e in "${essentials[@]}"
     do
         type ${e} 2>&1 > /dev/null
@@ -38,7 +38,7 @@ check_essential_softwares()
 
 create_softlinks()
 {
-    local dotfiles=(".pip" ".vimrc" ".gitconfig" ".tmux.conf" ".zshrc")
+    local dotfiles=(".pip" ".vimrc" ".gitconfig" ".tmux.conf")
     for dotfile in "${dotfiles[@]}"
     do
         ln -sf "${EXEC_PATH}/${dotfile}" "${HOME}/${dotfile}"
@@ -55,6 +55,7 @@ create_softlinks()
 
 install_plugins_online()
 {
+    # Install vundle at first.
     if [ -d "${VUNDLE_PATH}" ]; then
         echo "${VUNDLE_PATH} already exits. Updating..."
         cd "${VUNDLE_PATH}"
