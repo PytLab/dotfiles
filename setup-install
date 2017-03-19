@@ -10,10 +10,20 @@ HOME=${HOME}
 EXEC_PATH=${PWD}
 VUNDLE_PATH="${HOME}/.vim/bundle/Vundle.vim"
 
+# Check bash version.
+check_bash_version()
+{
+    local current_version=${BASH_VERSION:0:1}
+    if [ current_version < 4 ]; then
+        echo "ERROR: The version of your bash must be greater than 4.0!"
+        exit 1
+    fi
+}
+
 # Pre check.
 check_essential_softwares()
 {
-    local essentials=("vim" "git" "tmux")
+    local essentials=("vim" "git" "tmux" "zsh")
     for e in "${essentials[@]}"
     do
         type ${e} 2>&1 > /dev/null
@@ -28,7 +38,7 @@ check_essential_softwares()
 
 create_softlinks()
 {
-    local dotfiles=(".pip" ".vimrc" ".gitconfig" ".tmux.conf")
+    local dotfiles=(".pip" ".vimrc" ".gitconfig" ".tmux.conf" ".zshrc")
     for dotfile in "${dotfiles[@]}"
     do
         ln -sf "${EXEC_PATH}/${dotfile}" "${HOME}/${dotfile}"
@@ -125,6 +135,7 @@ install_vim_colorschemes()
 
 main()
 {
+    check_bash_version
     check_essential_softwares
     install_vim_colorschemes
     create_softlinks
