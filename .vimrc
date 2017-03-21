@@ -68,8 +68,9 @@ filetype plugin indent on
 map <F2> :NERDTreeToggle<CR>
 let NERDTreeChDirMode=1
 let NERDTreeShowBookmarks=1
-let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeWinSize=25
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$', '\.git$']
 
 " Plugin tagbar settings.
 map <F3> :TagbarToggle<CR> 
@@ -120,7 +121,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 " Use pylint to check python files.
-let g:syntastic_python_checkers = ['pylint']
+"let g:syntastic_python_checkers = ['pylint']
 map <F5> :SyntasticCheck<CR>
 
 " Ignore warnings about newlines trailing.
