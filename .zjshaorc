@@ -1,7 +1,16 @@
 #!/bin/local/env bash
 
+# Alias
 alias ll='ls -a -l'
+alias ssh='ssh -X'
 alias vim='/usr/local/bin/mvim -v'
 alias vi='/usr/local/bin/mvim -v'
 alias repos='cd /Users/zjshao/Documents/repos'
+alias octave='/usr/local/bin/octave --no-gui'
+
+# Python path
+export PYTHONPATH="/Users/zjshao/Documents/repos/VASPy":${PYTHONPATH}
+
+# brew bottle source
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles  # USTC image
 
