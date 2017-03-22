@@ -121,9 +121,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 " Use pylint to check python files.
-"let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['pylint']
 map <F5> :SyntasticCheck<CR>
 
 " Ignore warnings about newlines trailing.
-let g:syntastic_quiet_messages = { 'regex': 'trailing-newlines' }
+let g:syntastic_quiet_messages = { 'regex': ['trailing-newlines', 'invalid-name',
+    \'too-many-lines', 'too-many-instance-attributes', 'too-many-public-methods'] }
 
