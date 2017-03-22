@@ -5,12 +5,18 @@ alias ll='ls -a -l'
 alias ssh='ssh -X'
 alias vim='/usr/local/bin/mvim -v'
 alias vi='/usr/local/bin/mvim -v'
-alias repos='cd /Users/zjshao/Documents/repos'
+alias repo='cd /Users/zjshao/Documents/repos'
 alias octave='/usr/local/bin/octave --no-gui'
 
 # Python path
-export PYTHONPATH="/Users/zjshao/Documents/repos/VASPy":${PYTHONPATH}
+VASPY_PATH="/Users/zjshao/Documents/repos/VASPy"
+KMCLIBX_PATH="/Users/zjshao/Documents/repos/KMCLibX/python/src/"
+KYNETIX_PATH="/Users/zjshao/Documents/repos/Kynetix/"
+export PYTHONPATH=${VASPY_PATH}:${KMCLIBX_PATH}:${KYNETIX_PATH}:${PYTHONPATH}
 
 # brew bottle source
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles  # USTC image
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"  # USTC image
+
+# C++ include path
+export CPLUS_INCLUDE_PATH="/Users/zjshao/.pyenv/versions/2.7.13/include/python2.7/":${CPLUS_INCLUDE_PATH}
 
