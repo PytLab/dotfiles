@@ -3,5 +3,8 @@
 	email = shaozhengjiang@gmail.com
 
 [core]
-        editor = vim
+    editor = vim
+
+[diff "pandoc"]
+    textconv=pandoc --to=markdown
 
