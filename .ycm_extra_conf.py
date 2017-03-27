@@ -24,9 +24,9 @@ flags = [
 '-isystem', './tests/gmock',
 '-isystem', './tests/gmock/include',
 '-I', '/usr/include/mpi',
-'-I', '/home/zjshao/repos/KMCLibX/c++/src',
-'-I', '/home/zjshao/repos/KMCLibX/c++/externals/include',
-'-I', '/home/zjshao/repos/KMCLibX/c++/unittest',
+'-I', '/Users/zjshao/Documents/repos/KMCLibX/c++/src/',
+'-I', '/Users/zjshao/Documents/repos/KMCLibX/c++/externals/include',
+'-I', '/Users/zjshao/Documents/repos/KMCLibX/c++/unittest',
 '-I', '/usr/lib/gcc/x86_64-linux-gnu/5/include/',
 ]
 
