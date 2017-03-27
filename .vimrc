@@ -65,7 +65,7 @@ call vundle#end()
 filetype plugin indent on
 
 " Plugin nerdtree settings.
-map <F2> :NERDTreeToggle<CR>
+map <F1> :NERDTreeToggle<CR>
 let NERDTreeChDirMode=1
 let NERDTreeShowBookmarks=1
 let NERDTreeWinSize=25
@@ -73,7 +73,10 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$', '\.git$']
 
 " Plugin tagbar settings.
-map <F3> :TagbarToggle<CR> 
+map <F2> :TagbarToggle<CR> 
+
+" Pluging ctrlp settings.
+map <F3> :CtrlP<CR>
 
 " Plugin ctrlsf settings.
 map <F4> <Plug>CtrlSF
