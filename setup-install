@@ -38,7 +38,7 @@ check_essential_softwares()
 
 create_softlinks()
 {
-    local dotfiles=(".pip" ".vimrc" ".gitconfig" ".tmux.conf" ".zjshaorc")
+    local dotfiles=(".pip" ".vimrc" ".gitconfig" ".tmux.conf" ".zjshaorc" ".tern-project")
     for dotfile in "${dotfiles[@]}"
     do
         ln -sf "${EXEC_PATH}/${dotfile}" "${HOME}/${dotfile}"
