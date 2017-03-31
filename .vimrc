@@ -60,6 +60,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'suan/vim-instant-markdown'
 
 call vundle#end()
 filetype plugin indent on

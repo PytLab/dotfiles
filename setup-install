@@ -23,7 +23,7 @@ check_bash_version()
 # Pre check.
 check_essential_softwares()
 {
-    local essentials=("vim" "git" "tmux")
+    local essentials=("vim" "git" "tmux" "npm")
     for e in "${essentials[@]}"
     do
         type ${e} 2>&1 > /dev/null
@@ -65,6 +65,10 @@ install_plugins_online()
         echo "${VUNDLE_PATH} not exists. Downloading..."
         git clone https://github.com/gmarik/Vundle.vim.git ${VUNDLE_PATH}
     fi
+
+    # Install instant-markdown-d for instant markdown preview.
+    echo "Installing instant-markdown for instant markdown preview..."
+    npm -g intall instant-markdown-d > /dev/null 2>&1 
 
     # Install plugins.
     echo "Installing vim plugins..."
