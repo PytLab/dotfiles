@@ -41,8 +41,8 @@ create_softlinks()
     # Check dash.vim support before symlink creation.
     local system=$(uname)
     if [ ${system} != "Darwin" ]; then
-        echo "dash.vim is not supported on your ${system}, remove it from vimrc..."
-        sed -i '/rizzatti/d' .vimrc
+        echo "dash.vim is not supported on your ${system}, remove it from .vimrc..."
+        sed -i "/Plugin 'rizzatti\/dash\.vim/p" .vimrc
     fi
 
     local dotfiles=(".pip" ".vimrc" ".gitconfig" ".tmux.conf" ".zjshaorc" ".tern-project")
