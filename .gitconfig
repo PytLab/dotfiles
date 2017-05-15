@@ -8,3 +8,5 @@
 [diff "pandoc"]
     textconv=pandoc --to=markdown
 
+[gui]
+	recentrepo = /Users/zjshao/Documents/repos/catplot
