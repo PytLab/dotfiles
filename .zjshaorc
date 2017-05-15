@@ -7,6 +7,7 @@ alias vim='/usr/local/bin/mvim -v'
 alias vi='/usr/local/bin/mvim -v'
 alias repo='cd /Users/zjshao/Documents/repos'
 alias octave='/usr/local/bin/octave --no-gui'
+alias canopy='/Users/zjshao/Library/Enthought/Canopy/edm/envs/User/bin/python'
 
 # Python path
 VASPY_PATH="/Users/zjshao/Documents/repos/VASPy"
