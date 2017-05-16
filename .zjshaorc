@@ -8,6 +8,9 @@ alias vi='/usr/local/bin/mvim -v'
 alias repo='cd /Users/zjshao/Documents/repos'
 alias octave='/usr/local/bin/octave --no-gui'
 alias canopy='/Users/zjshao/Library/Enthought/Canopy/edm/envs/User/bin/python'
+alias canopy-pip='/Users/zjshao/Library/Enthought/Canopy/edm/envs/User/bin/pip'
+alias canopy-ipython='/Users/zjshao/Library/Enthought/Canopy/edm/envs/User/bin/ipython'
+alias canopy-jupyter='/Users/zjshao/Library/Enthought/Canopy/edm/envs/User/bin/jupyter'
 
 # Python path
 VASPY_PATH="/Users/zjshao/Documents/repos/VASPy"
