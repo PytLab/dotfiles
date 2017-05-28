@@ -90,3 +90,6 @@ source $ZSH/oh-my-zsh.sh
 # Unbind zsh Ctrl-l for screen clear which has collision with tmux
 bindkey -r ''
 
+# Disable update prompt
+DISABLE_UPDATE_PROMPT=true
+
