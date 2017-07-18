@@ -18,7 +18,8 @@ VASPY_PATH="/Users/zjshao/Documents/repos/VASPy"
 KMCLIBX_PATH="/Users/zjshao/Documents/repos/KMCLibX/python/src/"
 KYNETIX_PATH="/Users/zjshao/Documents/repos/Kynetix/"
 CATPLOT_PATH="/Users/zjshao/Documents/repos/catplot"
-export PYTHONPATH=${VASPY_PATH}:${KMCLIBX_PATH}:${KYNETIX_PATH}:${CATPLOT_PATH}:${PYTHONPATH}
+GAPY_PATH="/Users/zjshao/Documents/repos/gapy"
+export PYTHONPATH=${VASPY_PATH}:${KMCLIBX_PATH}:${KYNETIX_PATH}:${CATPLOT_PATH}:${GAPY_PATH}:${PYTHONPATH}
 
 # brew bottle source
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"  # USTC image
