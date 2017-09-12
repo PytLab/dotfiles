@@ -135,3 +135,7 @@ let g:syntastic_quiet_messages = { 'regex': ['trailing-newlines', 'invalid-name'
     \'too-many-lines', 'too-many-instance-attributes', 'too-many-public-methods',
     \'too-many-locals', 'too-many-branches'] }
 
+" Switch buffer
+nmap <C-b>n :bnext<CR>
+nmap <C-b>p :bprev<CR>
+
