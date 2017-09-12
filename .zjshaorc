@@ -18,7 +18,7 @@ VASPY_PATH="/Users/zjshao/Documents/repos/VASPy"
 KMCLIBX_PATH="/Users/zjshao/Documents/repos/KMCLibX/python/src/"
 KYNETIX_PATH="/Users/zjshao/Documents/repos/Kynetix/"
 CATPLOT_PATH="/Users/zjshao/Documents/repos/catplot"
-GAPY_PATH="/Users/zjshao/Documents/repos/gapy"
+GAPY_PATH="/Users/zjshao/Documents/repos/gaft"
 export PYTHONPATH=${VASPY_PATH}:${KMCLIBX_PATH}:${KYNETIX_PATH}:${CATPLOT_PATH}:${GAPY_PATH}:${PYTHONPATH}
 
 # brew bottle source
