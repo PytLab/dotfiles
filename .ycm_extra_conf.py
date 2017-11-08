@@ -19,15 +19,13 @@ flags = [
 '-isystem', '../llvm/tools/clang/include',
 '-I', '.',
 '-I', './ClangCompleter',
-'-isystem', './tests/gmock/gtest',
-'-isystem', './tests/gmock/gtest/include',
-'-isystem', './tests/gmock',
-'-isystem', './tests/gmock/include',
+'-isystem', '/Users/zjshao/Documents/repos/gasol/test/googletest/googletest/include',
 '-I', '/usr/include/mpi',
 '-I', '/Users/zjshao/Documents/repos/KMCLibX/c++/src/',
 '-I', '/Users/zjshao/Documents/repos/KMCLibX/c++/externals/include',
 '-I', '/Users/zjshao/Documents/repos/KMCLibX/c++/unittest',
 '-I', '/usr/lib/gcc/x86_64-linux-gnu/5/include/',
+'-I', '/Users/zjshao/Documents/repos/gasol/src'
 ]
 
 compilation_database_folder = ''
