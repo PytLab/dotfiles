@@ -26,6 +26,7 @@ flags = [
 '-I', '/Users/zjshao/Documents/repos/KMCLibX/c++/unittest',
 '-I', '/usr/lib/gcc/x86_64-linux-gnu/5/include/',
 '-I', '/Users/zjshao/Documents/repos/gasol/src'
+'-I', '/Users/zjshao/Documents/repos/gasol/unittest/googletest/googletest/include'
 ]
 
 compilation_database_folder = ''
