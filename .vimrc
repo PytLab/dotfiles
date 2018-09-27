@@ -81,7 +81,7 @@ map <F2> :TagbarToggle<CR>
 map <F3> :CtrlP<CR>
 
 " Plugin ctrlsf settings.
-map <F4> <Plug>CtrlSF
+map <F4> :CtrlSF
 
 " Plugin indentLine settings.
 let g:indentLine_char = "┆"

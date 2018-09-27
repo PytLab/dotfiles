@@ -13,14 +13,17 @@ alias canopy-ipython='/Users/zjshao/Library/Enthought/Canopy/edm/envs/User/bin/i
 alias canopy-jupyter='/Users/zjshao/Library/Enthought/Canopy/edm/envs/User/bin/jupyter'
 alias mysql='/usr/local/Cellar/mysql/5.7.18_1/bin/mysql'
 
+# PATH setting
+export PATH="/Users/zjshao/Documents/apps/bin":${PATH}
+
 # Python path
 VASPY_PATH="/Users/zjshao/Documents/repos/VASPy"
 KMCLIBX_PATH="/Users/zjshao/Documents/repos/KMCLibX/python/src/"
-KYNETIX_PATH="/Users/zjshao/Documents/repos/Kynetix/"
+MIKIAC_PATH="/Users/zjshao/Documents/repos/mikiac/"
 CATPLOT_PATH="/Users/zjshao/Documents/repos/catplot"
 GAFT_PATH="/Users/zjshao/Documents/repos/gaft"
 SF_PATH="/Users/zjshao/Documents/repos/simpleflow"
-export PYTHONPATH=${VASPY_PATH}:${KMCLIBX_PATH}:${KYNETIX_PATH}:${CATPLOT_PATH}:${GAFT_PATH}:${SF_PATH}:${PYTHONPATH}
+export PYTHONPATH=${VASPY_PATH}:${KMCLIBX_PATH}:${MIKIAC_PATH}:${CATPLOT_PATH}:${GAFT_PATH}:${SF_PATH}:${PYTHONPATH}
 
 # brew bottle source
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"  # USTC image
