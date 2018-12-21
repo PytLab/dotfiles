@@ -3,31 +3,5 @@
 # Alias
 alias ll='ls -a -l'
 alias ssh='ssh -X'
-alias vim='/usr/local/bin/mvim -v'
-alias vi='/usr/local/bin/mvim -v'
-alias repo='cd /Users/zjshao/Documents/repos'
-alias octave='/usr/local/bin/octave --no-gui'
-alias canopy='/Users/zjshao/Library/Enthought/Canopy/edm/envs/User/bin/python'
-alias canopy-pip='/Users/zjshao/Library/Enthought/Canopy/edm/envs/User/bin/pip'
-alias canopy-ipython='/Users/zjshao/Library/Enthought/Canopy/edm/envs/User/bin/ipython'
-alias canopy-jupyter='/Users/zjshao/Library/Enthought/Canopy/edm/envs/User/bin/jupyter'
-alias mysql='/usr/local/Cellar/mysql/5.7.18_1/bin/mysql'
-
-# PATH setting
-export PATH="/Users/zjshao/Documents/apps/bin":${PATH}
-
-# Python path
-VASPY_PATH="/Users/zjshao/Documents/repos/VASPy"
-KMCLIBX_PATH="/Users/zjshao/Documents/repos/KMCLibX/python/src/"
-MIKIAC_PATH="/Users/zjshao/Documents/repos/mikiac/"
-CATPLOT_PATH="/Users/zjshao/Documents/repos/catplot"
-GAFT_PATH="/Users/zjshao/Documents/repos/gaft"
-SF_PATH="/Users/zjshao/Documents/repos/simpleflow"
-export PYTHONPATH=${VASPY_PATH}:${KMCLIBX_PATH}:${MIKIAC_PATH}:${CATPLOT_PATH}:${GAFT_PATH}:${SF_PATH}:${PYTHONPATH}
-
-# brew bottle source
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"  # USTC image
-
-# C++ include path
-export CPLUS_INCLUDE_PATH="/Users/zjshao/.pyenv/versions/2.7.13/include/python2.7/":${CPLUS_INCLUDE_PATH}
+alias repo='cd /home/zshao/Documents/repo'
 
